@@ -38,7 +38,13 @@ familySize =sibsp +parch
 
 new_pas =[[pclass,sex,age,familySize,fare]]
 prediction =clf.predict(new_pas)
+col1, col2 = st.columns(2)
 
+with col1:
+    st.header("Heart Disease")
+
+with col2:
+    st.header("House Price")
 
 if prediction[0] ==1:
     print("Survived")
